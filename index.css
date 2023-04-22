@@ -1,0 +1,496 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Pacifico&family=Roboto+Mono:wght@300&family=Space+Mono&display=swap');
+
+/** FUENTES
+font-family: 'Montserrat', sans-serif;
+font-family: 'Pacifico', cursive;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Space Mono', monospace;
+font-family: 'Spline Sans Mono', monospace;
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+/*!LOADER*/
+/*#region loader*/
+
+.loaderContainer{
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #EEEEEE;
+    justify-content: center;
+    align-items: center;
+}
+.custom-loader {
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    border:8px solid;
+    border-color:#D2D2D2;
+    border-right-color: #FF482A;
+    animation:s2 1s infinite linear;
+    -webkit-animation:s2 1s infinite linear;
+}
+@keyframes s2 {to{transform: rotate(1turn)}}
+
+.hidden{
+    overflow: hidden;
+}
+
+/*#endregion loader*/
+
+/*!NAVBAR*/
+/*#region navbar*/
+
+.navbar{
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    position: fixed;
+    top: 0;
+    backdrop-filter: blur(3px);
+    background-color: #00000043;
+    z-index: 9999;
+}
+.list{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+}
+.navbarH1{
+    color: #EEEEEE;
+}
+.listItem{
+    list-style: none;
+    color: #EEEEEE;
+    text-decoration: none;
+    padding: 5px 20px;
+}
+.listItem::after{
+    display: block;
+    position: relative;
+    content: '';
+    height: 2px;
+    width: 0;
+    background-color: #EEEEEE;
+    transition: .2s ease;
+    -webkit-transition: .2s ease;
+    -moz-transition: .2s ease;
+    -ms-transition: .2s ease;
+    -o-transition: .2s ease;
+}
+.listItem:hover::after{
+    width: 100%;
+}
+
+/*#endregion navbar*/
+
+/*!PRIMER CONTENEDOR, PANTALLA PRINCIPAL*/
+/*#region primerContainer*/
+
+.primerContainer{
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/HotelPortada.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+.primerContainer h1{
+    color: #EEEEEE;
+    filter: drop-shadow(0px 0px 10px #000);
+    -webkit-filter: drop-shadow(0px 0px 10px #000);
+}   
+.arrow{
+    position: relative;
+    right: 0;
+    width: 80px;
+    filter: drop-shadow(0 0 10px #000);
+    -webkit-filter: drop-shadow(0 0 10px #000); 
+    animation: shake 1s infinite;
+    -webkit-animation: shake 1s infinite;
+}
+@keyframes shake {
+    50%{
+        transform: translateY(20px);
+        -webkit-transform: translateY(20px);
+        -moz-transform: translateY(20px);
+        -ms-transform: translateY(20px);
+        -o-transform: translateY(20px);
+    }
+    100%{
+        transform: translateY(0px);
+        -webkit-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        -o-transform: translateY(0px);
+}
+}
+
+/*#endregion primerContainer*/
+
+/*!SEGUNDO CONTENEDOR, ICONOS*/
+/*#region icons*/
+
+.segundoContenedor{
+    display: flex;
+    flex-direction: column;
+    background-color: #EEEEEE;
+    align-items: center;
+    padding: 50px 0;
+}
+.iconsContainer{
+    width: 100%;
+    /* height: 60vh; */
+    background-color: #EEEEEE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+.icon{
+    width: 200px;
+    height: 200px;
+    opacity: .6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.icon img{
+    width: 100px;
+}
+.segundoContenedor a{
+    color: #EEEEEE;
+    background-color: #333;
+    border: 1px solid #EEEEEE;
+    padding: 5px 30px;
+    text-decoration: none;
+    transition: .2s ease;
+    -webkit-transition: .2s ease;
+    -moz-transition: .2s ease;
+    -ms-transition: .2s ease;
+    -o-transition: .2s ease;
+}
+.segundoContenedor a:hover{
+    color: #333;
+    background-color: #EEEEEE;
+    border: 1px solid #333;
+}
+
+/*#endregion icons*/
+
+/*!FORMULARIOS*/
+/*#region Formularios*/
+
+.formContainer{
+    background-image: url(img/hotel2.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 80%;
+    height: 70vh;
+    background-color: #000000dc;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.signInFormContainer{
+    font-family: 'Spline Sans Mono', monospace;
+    margin: 0px 20px 0px 20px;
+    width: 55%;
+    height: 110%;
+    background-color: #E84545;
+    border-radius: inherit;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -ms-border-radius: inherit;
+    -o-border-radius: inherit;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px -3px 5px #000000dc;
+
+    transition: .3s ease;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    -ms-transition: .3s ease;
+    -o-transition: .3s ease;
+   
+}
+.signInForm, .signUpForm{
+    color: #EEEEEE;
+    width: 90%;
+    height: 90%;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.signInForm h1, .signUpForm h1{
+    font-size: 2rem;
+}
+.inputContainer{
+    display: block;
+}
+.inputContainer label{
+    display: block;
+}
+.inputContainer input{
+    display: block;
+    width: 100%;
+    height: 30px;
+    background-color: #E84545;
+    border: none;
+    outline: none;
+    border-bottom: solid 1px #333;
+    color: #EEEEEE;
+}
+.inputContainer input::placeholder{
+    color: #EEEEEE;
+}
+.btn{
+    width: 30%;
+    padding: 10px 30px;
+    display: block;
+    background-color: #EEEEEE;
+    color: #E84545;
+    border: 1px solid #E84545;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+    margin: 0 auto;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: #E84545;
+    color: #EEEEEE;
+    border: 1px solid #EEEEEE;
+}
+
+/*#endregion Formularios*/
+
+/*!TEXTOS*/
+/*#region Textos*/
+
+.textContainer{
+    font-family: 'Roboto Mono', monospace;
+    width: 40%;
+    height: 40%;
+    margin: auto 20px auto 20px;
+}
+.signInText, .signUpText{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    color: #EEEEEE;
+    margin: auto;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.signInText h3, .signUpText h3{
+    font-size: 1.5rem;
+}
+.btn2{
+    width: 30%;
+    padding: 10px 30px;
+    display: block;
+    margin: 0 auto;
+    background-color: #EEEEEE;
+    color: #000;
+    border: 1px solid #00000000;   
+    
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+}
+.btn2:hover{
+    cursor: pointer;
+    background-color: #00000000;
+    color: #EEEEEE;
+    border: 1px solid #EEEEEE;
+}
+
+/*#endregion Textos*/
+
+.hamburguer{
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    background: transparent;
+}
+.hamburguer > div{
+    width: 100%;
+    height: 2px;
+    background-color: #EEEEEE;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transform-origin: left;
+    z-index: 999;
+ }
+.hamburguer div.close:first-child{
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+.hamburguer div.close:nth-child(2){
+    opacity: 0;
+}
+.hamburguer div.close:last-child{
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+}
+.menu{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 0vh;
+    background-color: #000000dc;
+}
+
+
+/*!JavaScript*/
+/*#region JavaScript*/
+
+.show{
+    display: flex;
+}
+.desplazarFormulario{
+    flex-direction: row-reverse;
+}
+
+/*#endregion JavaScript*/
+
+/*!MEDIAQUERIS*/
+/*#region mediaqueri*/
+
+@media screen and (min-width: 1440px){
+    .signInForm h1, .signUpForm h1{
+        font-size: 40px;
+    }
+    label{
+        font-size: 30px;
+    }
+    
+    .signInText h3, .signUpText h3{
+        font-size: 40px;
+    }
+    .textContainer p{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .container{
+        width: 90%;
+    }
+    .btn, .btn2{
+        width: 100%;
+    }
+    .hamburguer{
+        display: flex;
+    }
+    .navbar .list{
+        display: none;
+    }
+    .navbar .list2{
+        display: none;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .container{
+        flex-direction: column;
+        height: 90vh;
+        
+    }
+    .signInFormContainer{
+        width: 105%;
+        margin: 0px;
+    }
+    .textContainer{
+        width: 90%;
+    }
+    /* .icon:nth-child(n + 2){
+        border-left: 2px solid #333;
+    }
+    .icon:nth-child(4){
+        border-left: none;
+    } */
+}
+
+@media screen and (max-width: 480px){
+    .container{
+        flex-direction: column;
+    }
+    .signInFormContainer{
+        width: 105%;
+        margin: 0px;
+    }
+    .textContainer{
+        width: 90%;
+    }
+    /* .icon:nth-child(n + 2){
+        border: none;
+    } */
+}
+
+/*#endregion mediaqueri*/
+
+
+
