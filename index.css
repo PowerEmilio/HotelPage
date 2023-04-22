@@ -355,6 +355,9 @@ font-family: 'Spline Sans Mono', monospace;
     border: 0;
     background: transparent;
 }
+.hamburguer:hover{
+    cursor: pointer;
+}
 .hamburguer > div{
     width: 100%;
     height: 2px;
